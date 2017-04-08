@@ -1,0 +1,88 @@
+<Workspace Version="1.3.0.875" X="219.329385471578" Y="257.903037262835" zoom="0.692004707491244" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="04ec1056-f46c-4701-b91f-dbdefbacbeeb" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CSharpScript.FromString" x="445.962133831122" y="-126.868482921263" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="..\..\..\..\..\AppData\Roaming\Dynamo\Dynamo Core\1.3\packages\Dynamic CSharp Interpreter\bin\Core.dll" function="Scripting.CSharpScript.FromString@string,var[]..[],string[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.Filename guid="1f9dbc60-5310-4bea-b839-1c5bfff906a4" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-25.8373220054512" y="-17.4263552033426" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\Program Files\Oasys\GSA 8.7\Samples\Stair.gwb</System.String>
+      <HintPath>C:\Program Files\Oasys\GSA 8.7\Samples\Stair.gwb</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <CoreNodeModels.Input.Filename guid="46f26007-88e6-4bef-9208-161fbda942f5" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-86.0575051616814" y="94.6608275241225" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\Program Files\Oasys\GSA 8.7\Interop.Gsa_8_7.dll</System.String>
+      <HintPath>C:\Program Files\Oasys\GSA 8.7\Interop.Gsa_8_7.dll</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="c59a1fdf-f99d-4666-98ce-15d58ab4bf73" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1515.21746816978" y="350.658569622878" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;&#xA;using Interop.gsa_8_7;&#xA;&#xA;string filePath = IN[0].ToString();&#xA;            ComAuto GsaObj = new ComAuto();&#xA;            GsaObj.SetLocale(Locale.LOC_EN_GB);&#xA;            GsaObj.Open(filePath);&#xA;&#xA;string sList = &quot;all&quot;;&#xA;int[] NodeRefs = null;&#xA;&#xA;GsaObj&#xA;&#xA;&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="a4171e56-1f61-4bbe-a14e-e9585778f487" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1115.69893507146" y="-296.849550208491" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;&#xA;using Interop.gsa_8_7;&#xA;&#xA;&#xA;ComAuto GsaObj = IN[0] as ComAuto;&#xA;&#xA;string sList = IN[1].ToString();&#xA;&#xA;int[] NodeRefs = null;&#xA;&#xA;short s = GsaObj.EntitiesInList(sList, GsaEntity.NODE, out NodeRefs);&#xA;&#xA;NodeRefs&#xA;&#xA;&quot;;" ShouldFocus="false" />
+    <CoreNodeModels.Input.Filename guid="b9abb0ee-7318-458c-bc06-21ef44d0d653" type="CoreNodeModels.Input.Filename" nickname="File Path" x="1061.01193062772" y="374.61807579797" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\Program Files\Oasys\GSA 8.7\Interop.Gsa_8_7.dll</System.String>
+      <HintPath>C:\Program Files\Oasys\GSA 8.7\Interop.Gsa_8_7.dll</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="27f4e0d3-bba7-47ae-8c4c-5565719dd190" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CSharpScript.FromString" x="1309.31265963001" y="19.3532675380605" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="..\..\..\..\..\AppData\Roaming\Dynamo\Dynamo Core\1.3\packages\Dynamic CSharp Interpreter\bin\Core.dll" function="Scripting.CSharpScript.FromString@string,var[]..[],string[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="c7b494ac-4736-4af8-b804-6545e9b24440" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-30.5932797919466" y="-256.183650839948" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;&#xA;using Interop.gsa_8_7;&#xA;&#xA;string filePath = IN[0].ToString();&#xA;            ComAuto GsaObj = new ComAuto();&#xA;            GsaObj.SetLocale(Locale.LOC_EN_GB);&#xA;            GsaObj.Open(filePath);&#xA;GsaObj&#xA;&#xA;&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="2c5899ec-73f1-4f58-823d-62f3d8a7aaa4" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1101.5675363521" y="217.902917048943" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="{a,b};" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="7264adff-8eeb-4ab8-b94a-31eaa7bc9d0e" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1035.66792924395" y="286.688231506017" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;all&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="1d04c30e-6d4b-4135-a112-afb800dd4c2b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Object.Type" x="763.937330119451" y="-124.460994481909" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DSCoreNodes.dll" function="DSCore.Object.Type@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="08593da7-b616-48fd-820d-ce6185c29875" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="GSAInterop.OpenGsaModel" x="154.950614855272" y="223.348956075582" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="bin\Debug\GSAInOp.dll" function="GSAInOp.GSAInterop.OpenGsaModel@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.Filename guid="8ddb9a79-2076-4619-a8b2-ccb690126bf9" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-210.893155639343" y="223.539417276596" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>..\..\..\..\..\..\..\Program Files\Oasys\GSA 8.7\Samples\2D_Elements\Cynthia.gwb</System.String>
+      <HintPath>C:\Program Files\Oasys\GSA 8.7\Samples\2D_Elements\Cynthia.gwb</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="138fbb9d-9782-458a-aabb-7d5c48b15d16" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="987.112277542069" y="180.09845866355" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="a;" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="40b6df67-d679-4bf2-bf17-34e0c5412eb5" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="GSAInterop.GetGsaNodeNumbers" x="568.619540053747" y="141.463131891394" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="bin\Debug\GSAInOp.dll" function="GSAInOp.GSAInterop.GetGsaNodeNumbers@var,string">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="744d05df-59c5-4e78-9299-6ade565c2865" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="430.353894965117" y="255.373108049766" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;all&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="df6addc5-13be-463d-af2c-940066472de4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="GSAInterop.OpenGsaModel" x="94.8140099135591" y="413.289996543848" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="bin\Debug\GSAInOp.dll" function="GSAInOp.GSAInterop.OpenGsaModel@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="04ec1056-f46c-4701-b91f-dbdefbacbeeb" start_index="0" end="1d04c30e-6d4b-4135-a112-afb800dd4c2b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="46f26007-88e6-4bef-9208-161fbda942f5" start_index="0" end="04ec1056-f46c-4701-b91f-dbdefbacbeeb" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a4171e56-1f61-4bbe-a14e-e9585778f487" start_index="0" end="27f4e0d3-bba7-47ae-8c4c-5565719dd190" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b9abb0ee-7318-458c-bc06-21ef44d0d653" start_index="0" end="27f4e0d3-bba7-47ae-8c4c-5565719dd190" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c7b494ac-4736-4af8-b804-6545e9b24440" start_index="0" end="04ec1056-f46c-4701-b91f-dbdefbacbeeb" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2c5899ec-73f1-4f58-823d-62f3d8a7aaa4" start_index="0" end="27f4e0d3-bba7-47ae-8c4c-5565719dd190" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="7264adff-8eeb-4ab8-b94a-31eaa7bc9d0e" start_index="0" end="2c5899ec-73f1-4f58-823d-62f3d8a7aaa4" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="08593da7-b616-48fd-820d-ce6185c29875" start_index="0" end="40b6df67-d679-4bf2-bf17-34e0c5412eb5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8ddb9a79-2076-4619-a8b2-ccb690126bf9" start_index="0" end="08593da7-b616-48fd-820d-ce6185c29875" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="8ddb9a79-2076-4619-a8b2-ccb690126bf9" start_index="0" end="df6addc5-13be-463d-af2c-940066472de4" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="138fbb9d-9782-458a-aabb-7d5c48b15d16" start_index="0" end="2c5899ec-73f1-4f58-823d-62f3d8a7aaa4" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="744d05df-59c5-4e78-9299-6ade565c2865" start_index="0" end="40b6df67-d679-4bf2-bf17-34e0c5412eb5" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="e9693125-8e17-46e2-ac48-facc5b8965b4" annotationText="&lt;Click here to edit the group title&gt;" left="-96.0575051616814" top="-302.183650839948" width="1041.99483528113" height="491.84447836407" fontSize="30" InitialTop="-256.183650839948" InitialHeight="475.844478364071" TextblockHeight="36" backgrouund="#FFC1D676">
+      <Models ModelGuid="04ec1056-f46c-4701-b91f-dbdefbacbeeb" />
+      <Models ModelGuid="1f9dbc60-5310-4bea-b839-1c5bfff906a4" />
+      <Models ModelGuid="46f26007-88e6-4bef-9208-161fbda942f5" />
+      <Models ModelGuid="c7b494ac-4736-4af8-b804-6545e9b24440" />
+      <Models ModelGuid="1d04c30e-6d4b-4135-a112-afb800dd4c2b" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="6caefb7c-dc1b-424b-838a-9be5fb608edf" annotationText=" " left="-220.893155639343" top="193.348956075582" width="617.843770494615" height="125.190461201014" fontSize="14" InitialTop="223.348956075582" InitialHeight="123.187250223253" TextblockHeight="20" backgrouund="#FFFF7BAC">
+      <Models ModelGuid="08593da7-b616-48fd-820d-ce6185c29875" />
+      <Models ModelGuid="8ddb9a79-2076-4619-a8b2-ccb690126bf9" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

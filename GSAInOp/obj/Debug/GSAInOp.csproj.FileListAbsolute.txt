@@ -1,0 +1,6 @@
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\GSAInOp\GSAInOp\bin\Debug\GSAInOp.dll
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\GSAInOp\GSAInOp\bin\Debug\GSAInOp.pdb
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\GSAInOp\GSAInOp\obj\Debug\GSAInOp.csprojResolveAssemblyReference.cache
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\GSAInOp\GSAInOp\obj\Debug\GSAInOp.dll
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\GSAInOp\GSAInOp\obj\Debug\GSAInOp.pdb
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\GSAInOp\GSAInOp\bin\Debug\Interop.Gsa_8_7.dll
