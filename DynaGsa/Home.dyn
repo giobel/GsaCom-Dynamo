@@ -1,0 +1,62 @@
+<Workspace Version="1.3.0.875" X="-693.895430108675" Y="-435.164078954076" zoom="1.23489149706356" ScaleFactor="1" Name="Home" Description="" RunType="Manual" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7686a2e8-78d3-4347-8912-87d44baaa005" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="OpenGsa.OpenModel" x="544.8" y="12" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DynaGsa\bin\Release\DynaGsa.dll" function="DynaGsa.OpenGsa.OpenModel@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.Filename guid="ba7c6723-af3b-44b8-a0ae-c21b953d0429" type="CoreNodeModels.Input.Filename" nickname="File Path" x="174.4" y="-7.2" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\Program Files\Oasys\GSA 8.7\Samples\Stair.gwb</System.String>
+      <HintPath>C:\Program Files\Oasys\GSA 8.7\Samples\Stair.gwb</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="06a23cc8-708d-4b70-8a1f-ba66485dddcc" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="9.39999999999981" y="100.2" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;&#xA;using Interop.gsa_8_7;&#xA;&#xA;&#xA;&#xA;        public static ComAuto OpenModel(string filePath)&#xA;        {&#xA;            ComAuto GsaObj = new ComAuto();&#xA;&#xA;            GsaObj.SetLocale(Locale.LOC_EN_GB);&#xA;            GsaObj.Open(filePath.ToString());&#xA;            return GsaObj as ComAuto;&#xA;        }&#xA;&#xA;OpenModel(IN[0].ToString())&#xA;&#xA;&#xA;        &quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="be6a1502-60fd-4057-b263-3031186b00dc" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CSharpScript.FromString" x="581.666502108005" y="198.133991567979" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="..\..\..\..\AppData\Roaming\Dynamo\Dynamo Core\1.3\packages\Dynamic CSharp Interpreter\bin\Core.dll" function="Scripting.CSharpScript.FromString@string,var[]..[],string[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Input.Filename guid="67df7ac1-4837-4d00-8fe6-db16c949d95c" type="CoreNodeModels.Input.Filename" nickname="File Path" x="104.8" y="526.4" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>C:\Program Files\Oasys\GSA 8.7\Interop.Gsa_8_7.dll</System.String>
+      <HintPath>C:\Program Files\Oasys\GSA 8.7\Interop.Gsa_8_7.dll</HintPath>
+    </CoreNodeModels.Input.Filename>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="25979f76-9bcd-4831-aa47-6ee400253d40" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Object.Type" x="838.8" y="138.4" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="DSCoreNodes.dll" function="DSCore.Object.Type@var">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="358eaf0c-676f-4307-bacd-59a94c05ac07" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Commands.Coordinates" x="1302.61037215591" y="577.776637034662" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="DynaGsa\bin\Release\DynaGsa.dll" function="DynaGsa.Commands.Coordinates@var,string">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="2aa9a753-c45d-4dd1-b4df-9701c3888135" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="975.2" y="277.8" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;all&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="634247af-a9dc-492c-a636-13f6c9732d27" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="-240.501996485149" y="655.610047461116" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;&#xA;using System;&#xA;using System.Collections.Generic;&#xA;using Interop.gsa_8_7;&#xA;using Autodesk.DesignScript.Geometry;&#xA;&#xA;&#xA;public static List&lt;Point&gt; Coordinates(ComAuto GsaObj, string sList)&#xA;        {&#xA;&#xA;            int[] NodeRefs = null;&#xA;&#xA;            short s = GsaObj.EntitiesInList(sList, GsaEntity.NODE, out NodeRefs);&#xA;&#xA;            Array.Sort(NodeRefs);&#xA;&#xA;            List&lt;Point&gt; PtList = new List&lt;Point&gt;();&#xA;&#xA;&#xA;            GsaNode[] Nodes;&#xA;&#xA;&#xA;            //Get node coordinates&#xA;            short t = GsaObj.Nodes(NodeRefs, out Nodes);&#xA;&#xA;            foreach (GsaNode item in Nodes)&#xA;            {&#xA;&#xA;                PtList.Add(Point.ByCoordinates(item.Coor[0], item.Coor[1], item.Coor[2]));&#xA;            }&#xA;&#xA;            return PtList;&#xA;        }&#xA;&#xA;&#xA;Coordinates(IN[0] as ComAuto, IN[1].ToString())&#xA;        &quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="2c4efc81-249b-4765-9586-5d97030b86f7" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="810" y="465" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true" CodeText="{a,b};" ShouldFocus="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.CodeBlockNodeModel>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="9c32e6d1-7093-453e-9d4b-d2cdb7945433" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="595" y="465" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;all&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="69b54024-9601-4e65-a750-346ae50c008d" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="526.804769077723" y="713.5059430247" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;&#xA;using System;&#xA;using System.Collections.Generic;&#xA;using Interop.gsa_8_7;&#xA;using Autodesk.DesignScript.Geometry;&#xA;&#xA;&#xA;public static ComAuto Coordinates(ComAuto GsaObj)&#xA;        {&#xA;&#xA;		return GsaObj as ComAutoClass;&#xA;&#xA;		}&#xA;&#xA;&#xA;&#xA;Coordinates(IN[0] as ComAuto)&#xA;        &quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="6c4b854a-9de9-4807-9d0c-6a0dbeac5487" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CSharpScript.FromString" x="1002.4167302271" y="861.669200142138" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="..\..\..\..\AppData\Roaming\Dynamo\Dynamo Core\1.3\packages\Dynamic CSharp Interpreter\bin\Core.dll" function="Scripting.CSharpScript.FromString@string,var[]..[],string[]">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="True" />
+      <PortInfo index="2" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="ba7c6723-af3b-44b8-a0ae-c21b953d0429" start_index="0" end="7686a2e8-78d3-4347-8912-87d44baaa005" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ba7c6723-af3b-44b8-a0ae-c21b953d0429" start_index="0" end="be6a1502-60fd-4057-b263-3031186b00dc" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="06a23cc8-708d-4b70-8a1f-ba66485dddcc" start_index="0" end="be6a1502-60fd-4057-b263-3031186b00dc" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="be6a1502-60fd-4057-b263-3031186b00dc" start_index="0" end="25979f76-9bcd-4831-aa47-6ee400253d40" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="be6a1502-60fd-4057-b263-3031186b00dc" start_index="0" end="2c4efc81-249b-4765-9586-5d97030b86f7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="be6a1502-60fd-4057-b263-3031186b00dc" start_index="0" end="6c4b854a-9de9-4807-9d0c-6a0dbeac5487" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="67df7ac1-4837-4d00-8fe6-db16c949d95c" start_index="0" end="be6a1502-60fd-4057-b263-3031186b00dc" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="67df7ac1-4837-4d00-8fe6-db16c949d95c" start_index="0" end="6c4b854a-9de9-4807-9d0c-6a0dbeac5487" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2aa9a753-c45d-4dd1-b4df-9701c3888135" start_index="0" end="358eaf0c-676f-4307-bacd-59a94c05ac07" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="9c32e6d1-7093-453e-9d4b-d2cdb7945433" start_index="0" end="2c4efc81-249b-4765-9586-5d97030b86f7" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="69b54024-9601-4e65-a750-346ae50c008d" start_index="0" end="6c4b854a-9de9-4807-9d0c-6a0dbeac5487" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6c4b854a-9de9-4807-9d0c-6a0dbeac5487" start_index="0" end="358eaf0c-676f-4307-bacd-59a94c05ac07" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-42.1672172546387" eyeY="45.68115234375" eyeZ="203.808212280273" lookX="42.1672172546387" lookY="-45.68115234375" lookZ="-203.808212280273" upX="0" upY="1" upZ="0" />
+  </Cameras>
+</Workspace>

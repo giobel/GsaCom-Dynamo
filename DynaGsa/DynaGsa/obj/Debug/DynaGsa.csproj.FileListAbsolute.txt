@@ -1,0 +1,5 @@
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\DynaGsa\DynaGsa\bin\Debug\DynaGsa.dll
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\DynaGsa\DynaGsa\bin\Debug\DynaGsa.pdb
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\DynaGsa\DynaGsa\obj\Debug\DynaGsa.csprojResolveAssemblyReference.cache
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\DynaGsa\DynaGsa\obj\Debug\DynaGsa.dll
+c:\users\giovanni.brogiolo\documents\visual studio 2015\Projects\DynaGsa\DynaGsa\obj\Debug\DynaGsa.pdb
